@@ -428,7 +428,5 @@
     });
   });
 
-  console.log("✨ Data Parse Website Upgrade Complete!");
+  console.log("✨ Data Parse Website: Mobile Chart Fix v1.2 Active!");
 })();
-
-
