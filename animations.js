@@ -349,6 +349,7 @@
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           plugins: { legend: { display: false } },
           scales: {
             y: { grid: { color: colors.grid }, ticks: { color: colors.text, font: { size: 10 } } },
@@ -405,7 +406,8 @@
     }
   }
 
-  initCharts();
+  // DELAYED INIT FOR CHARTS TO ENSURE PROPER CONTAINER DIMENSIONS ON MOBILE
+  setTimeout(initCharts, 200);
 
   // THEME SYNC
   const observer = new MutationObserver((mutations) => {

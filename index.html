@@ -1523,7 +1523,9 @@
           </div>
           <div class="relative" data-aos="fade-left">
             <div class="glass-card-premium p-6 rounded-3xl relative z-10">
-              <canvas id="growthChart" height="250"></canvas>
+              <div class="relative h-64 sm:h-72">
+                <canvas id="growthChart"></canvas>
+              </div>
             </div>
             <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 blur-3xl rounded-full"></div>
@@ -1560,7 +1562,7 @@
               <input type="number" id="val-bi" value="40" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-3 py-2 text-tertiary font-bold focus:outline-none focus:border-outline transition-colors">
             </div>
           </div>
-          <div class="h-64">
+          <div class="relative h-64 sm:h-72">
             <canvas id="sandboxChart"></canvas>
           </div>
         </div>
