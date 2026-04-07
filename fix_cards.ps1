@@ -1,4 +1,4 @@
-$base = 'c:\Users\hp\Desktop\data parse\data parse'
+$base = 'c:\Users\hp\Desktop\data parse'
 $files = @('schedule.html', 'join.html', 'work.html', 'services.html', 'about.html', 'blog.html')
 foreach ($f in $files) {
     $path = Join-Path $base $f

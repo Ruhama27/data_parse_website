@@ -153,7 +153,7 @@
 
   /* ── 8. ANIMATED STAT COUNTERS ── */
   const statEls = document.querySelectorAll(
-    ".font-headline.text-2xl.font-bold, .font-headline.text-4xl.font-bold"
+    ".font-headline.text-2xl.font-bold, .font-headline.text-3xl.font-bold, .font-headline.text-4xl.font-bold"
   );
   function parseNum(txt) {
     const n = parseFloat(txt.replace(/[^0-9.]/g, ""));
@@ -316,14 +316,18 @@
   function getThemeColors() {
     const isLight = document.documentElement.classList.contains('light');
     return {
-      text: isLight ? '#395886' : '#8aaee0',
-      grid: isLight ? 'rgba(57, 88, 134, 0.1)' : 'rgba(255, 255, 255, 0.05)',
+      text: isLight ? '#080f1e' : '#8aaee0',
+      grid: isLight ? 'rgba(57, 88, 134, 0.08)' : 'rgba(255, 255, 255, 0.05)',
       primary: '#8aaee0',
       secondary: '#628ecb'
     };
   }
 
   function initCharts() {
+    if (typeof Chart === 'undefined') {
+      console.warn("⚠ Chart.js not loaded. Skipping chart initialization.");
+      return;
+    }
     const colors = getThemeColors();
     const growthCtx = document.getElementById('growthChart')?.getContext('2d');
     if (growthCtx) {
@@ -428,5 +432,5 @@
     });
   });
 
-  console.log("✨ Data Parse Website: Mobile Chart Fix v1.2 Active!");
+  console.log("✨ Data Parse Website: Animations Active!");
 })();
